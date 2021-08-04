@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.product-card {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 2px #f4f4f4;
+}
+
+.product-card:hover .product-card__actions {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.product-card:hover .product-card__footer .cart-btn {
+    background-color: #ff9800;
+    color: #ffffff;
+}
+
+.product-card__image {
+    position: relative;
+}
+
+.product-card__image img {
+    width: 100%;
+}
+
+.product-card__info {
+    padding: 16px;
+}
+
+.product-card__info .desc {
+    color: #ababab;
+    font-size: 12px;
+}
+
+.product-card__rating {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.product-card__rating i {
+    color: #f2f231;
+    height: 24px;
+    width: 24px;
+    font-size: 20px;
+}
+
+.product-card__rating .label {
+    font-size: 13px;
+    margin-left: 10px;
+    color: #6c757d;
+}
+
+.product-card__footer {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-card__footer .price {
+    display: flex;
+    align-items: center;
+}
+
+.product-card__footer .new-price {
+    font-size: 18px;
+}
+
+.product-card__footer .old-price {
+    margin-left: 10px;
+    color: #ababab;
+    text-decoration: line-through;
+}
+
+.product-card__footer .cart-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 0;
+    background-color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.product-card__actions {
+    position: absolute;
+    transform: translateY(32px);
+    transition: all 0.4s;
+    opacity: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+}
+
+.product-card__actions button {
+    color: #ff9800;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.product-card__actions button i {
+    font-size: 20px;
+}
+
+.product-card__actions button:first-child {
+    flex-grow: 1;
+}
+
+.product-card__actions button:first-child:after {
+    content: '';
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: width 0.5s ease;
+}
+
+.product-card__actions button:first-child:hover:after {
+    width: 100%;
+    background: #ff9800;
+}
